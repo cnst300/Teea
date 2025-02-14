@@ -1,0 +1,138 @@
+* {
+    cursor: none !important;
+}
+
+h1 {
+    padding-top: 10%;
+    text-align: center;
+    font-size: 100px;
+    color: black; 
+    text-shadow: 1px 2px white;
+}
+
+body {
+    margin: 0; 
+    padding: 0;
+    size: 100vh;
+    background: radial-gradient(rgb(255, 2, 53), rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Cursor personalizat */
+.custom-cursor {
+    pointer-events: none;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: white;
+    transform: rotate(45deg);
+    z-index: 9999;
+}
+
+.custom-cursor::before,
+.custom-cursor::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+}
+
+.custom-cursor::before {
+    top: -10px;
+    left: 0;
+}
+
+.custom-cursor::after {
+    top: 0;
+    left: -10px;
+}
+
+.custom-cursor.color-changedRed {
+    background: red;
+}
+
+.custom-cursor.color-changedBlack {
+    background: black;
+}
+
+.custom-cursor.color-changedRed::before,
+.custom-cursor.color-changedRed::after {
+    background: red;
+}
+
+.custom-cursor.color-changedBlack::before,
+.custom-cursor.color-changedBlack::after {
+    background: black;
+}
+
+/* ✅ Butoanele responsiv */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+/* Stil butoane */
+.button {
+    font-size: 24px;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yesBT {
+    background-color: black;
+    color: white;
+}
+
+#noBT {
+    background-color: white;
+    color: black;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+/* ✅ Responsivitate pentru ecrane mici */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 60px; /* Titlu mai mic pe mobile */
+    }
+
+    .button-container {
+        flex-direction: column; /* Butoanele pe verticală */
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .button {
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        padding-top: 10%;
+        font-size: 40px; /* Titlu și mai mic pe ecrane foarte mici */
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+}
+
+.blackOUT{
+    background: rgb(0, 0, 0);
+    transition: background 1s ease-in-out;
+}
