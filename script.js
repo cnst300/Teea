@@ -32,7 +32,7 @@ colorButtonNo.addEventListener('mouseleave', () => {
 
 document.getElementById("yesBT").addEventListener("click", function() {
     if(clickNo != 0){
-        alert("Asa da ❤️");
+        alert("Ai scapat, de data asta..❤️");
     }
     window.location.href = "yes.html";
 });
@@ -45,7 +45,7 @@ document.getElementById("noBT").addEventListener("click", () => {
 
     if(clickNo == 1){
         setTimeout(() => {
-            alert("Cred ca ai apasat gresit..\n Eu zic sa mai incerci odata!");
+            alert("Vrei sa-ti rup picioarele?\n Mai baga o fisa!");
 
             document.body.classList.remove("blackOUT");
         }, 1500); 
@@ -53,7 +53,7 @@ document.getElementById("noBT").addEventListener("click", () => {
 
     if(clickNo == 2){
         setTimeout(() => {
-            alert("Vezi ca trebuie sa apesi celalat buton..");
+            alert("OK.. 2 picioare rupte sunt pe drum\n Vrei si un ochi negru?");
 
             document.body.classList.remove("blackOUT");
         }, 1500); 
@@ -61,13 +61,15 @@ document.getElementById("noBT").addEventListener("click", () => {
 
     if(clickNo == 3){
         setTimeout(() => {
-            alert("M-ai suparat..");
+            alert("Te bag in pizda ma-tii..\n Esti nesimtita..");
 
             document.querySelector("h1").style.display = "none";
 
             document.querySelectorAll("button").forEach(button => {
                 button.style.display = "none";
             });
+
+            document.getElementById("gifDisplay").style.display = "block";
         }, 1500); 
     }
 });
